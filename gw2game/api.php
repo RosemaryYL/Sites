@@ -9,6 +9,7 @@
 require_once 'config.php';
 
 $choose = $_POST['choose'];
+$choose = str_replace('选项', '', $choose);
 $route = explode("\n", $choose);
 //var_dump($route);
 $total = count($route);
