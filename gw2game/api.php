@@ -140,7 +140,7 @@ function count_total_score($user, $config_mission, $config_score_item)
     $total_score = $user['score'];
     if (in_array('X-3', $user['step'])) {
         $total_score += $user['+score'] * 10;
-    } else if (in_array('X-3', $user['step'])) {
+    } else if (in_array('X-2', $user['step'])) {
         $total_score += $user['-score'] * 10;
     }
     foreach ($user['mission'] as $_mission) {
