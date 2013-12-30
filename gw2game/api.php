@@ -11,7 +11,9 @@ require_once 'config.php';
 $choose = $_POST['choose'];
 $choose = str_replace('选项', '', $choose);
 $route = explode("\n", $choose);
+$route = preg_replace('/[^A-Z1-9\-]/i', '', $route);
 //var_dump($route);
+$route = array_filter($route);
 $total = count($route);
 if ($total > 25) {
     result(1, $str);
