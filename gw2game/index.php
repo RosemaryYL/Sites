@@ -13,6 +13,7 @@ and open the template in the editor.
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     <body>
+        <div style="height: 500px;width: 1000px;">
         <div style="float: left;width: 300px">
             <p>选项</p>
             <p><textarea cols="36" rows="25"></textarea></p>
@@ -26,6 +27,12 @@ and open the template in the editor.
             <p>背包物品</p>
             <div id="bag" style="width: 300px;height: 400px;border: solid 1px"></div>
             <p>总分：<span id="score"></span></p>
+        </div>
+        </div>
+        <div>
+            <p>说明</p>
+            <p>1.有2个选项的路线，选择第二项，需要在选项后面加-2，比如C-2-3，选择继续追货，需要写C-2-3-2;</p>
+            <p>2.第三天C开头的选项，需要在前面加3，比如第三天的C-1，需要写3C-1</p>
         </div>
         <script>
             $("#submit").click(function(event) {
