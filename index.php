@@ -17,7 +17,7 @@
 		foreach ($arrRows as $row) {
 	?>
 	<tr>
-		<td><?=$row['cnname'];?></td><td><?=$row['name'];?></td><td><img scr="/img/<?=$row['pic_url'];?>"></td><td><?=$row['map'];?></td><td><?=$row['way_point'];?></td>
+		<td><?=$row['cnname'];?></td><td><?=$row['name'];?></td><td><img scr="http://106.186.18.29/img/<?=$row['pic_url'];?>"></td><td><?=$row['map'];?></td><td><?=$row['way_point'];?></td>
 	</tr>
 	<?php
 		}
