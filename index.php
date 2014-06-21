@@ -7,11 +7,7 @@
  <body class="docs ">
  	<table class="pve center table" style="width:auto">
 <tbody>
-	<tr style="vertical-align:bottom;">
-	<th> cname </th> <th> name</th><th> 图片 </th><th> 地图名称 </th><th>中文名称</th><th>传送点代码</th>
-	</tr>
 	<?php
-		require_once("config.php");
 		$config_map = array(
 			'Black Citadel' => '黑烟壁垒',
 			'Blazeridge Steppes' => '裂脊山脉',
@@ -45,6 +41,16 @@
 			'Timberline Falls' => '林线瀑布',
 			'Wayfarer Foothills' => '旅者丘陵'
 		);
+		foreach ($config_map as $key => $value) {
+			echo '<a href="/?map='.urlencode($key).'">'.$value.'</a><br>';
+		}
+	?>
+	<tr style="vertical-align:bottom;">
+	<th> cname </th> <th> name</th><th> 图片 </th><th> 地图名称 </th><th>中文名称</th><th>传送点代码</th>
+	</tr>
+	<?php
+		require_once("config.php");
+
 		if (isset($_GET['map'])) {
 			$maps = explode(',', $_GET['map']);
 		} else {
