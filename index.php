@@ -45,7 +45,11 @@
 			'Timberline Falls' => '',
 			'Wayfarer Foothills' => ''
 		);
-		$maps = explode(',', $_GET['map']);
+		if (isset($_GET['map'])) {
+			$maps = explode(',', $_GET['map']);
+		} else {
+			$maps = array();
+		}
 		$arrRows = $config;
 		$i = 0;
 		foreach ($arrRows as $row) {
