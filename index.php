@@ -8,7 +8,7 @@
  	<table class="pve center table" style="width:auto">
 <tbody>
 	<tr style="vertical-align:bottom;">
-	<th> cnname </th> <th> name</th><th> pic </th><th> map </th><th>way_point</th><th>code</th>
+	<th> cname </th> <th> name</th><th> 图片 </th><th> 地图名称 </th><th>中文名称</th><th>传送点代码</th>
 	</tr>
 	<?php
 		require_once("config.php");
@@ -64,7 +64,7 @@
 			}
 	?>
 	<tr<?=$style;?>>
-		<td><?=$row['cnname'];?></td><td><?=$row['name'];?></td><td><img width="360px" src="http://106.186.18.29/img/<?=$row['pic_url'];?>"></td><td><?=$row['map'];?></td><td><?=$config_map[$row['way_point']];?></td><td><?=$row['code'];?></td>
+		<td><?=$row['cnname'];?></td><td><?=$row['name'];?></td><td><img width="360px" src="http://106.186.18.29/img/<?=$row['pic_url'];?>"></td><td><?=$row['map'];?></td><td><?=$config_map[$row['map']];?></td><td><?=$row['code'];?></td>
 	</tr>
 	<?php
 		}
