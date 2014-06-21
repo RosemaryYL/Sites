@@ -12,7 +12,7 @@
 	<th> cnname </th> <th> name</th><th> pic </th><th> map </th><th>way_point</th><th>code</th>
 	</tr>
 	<?php
-	require_once("config.php");
+		require_once("config.php");
 		$arrRows = $config;
 		$i = 0;
 		foreach ($arrRows as $row) {
